@@ -1,0 +1,7 @@
+css , fonts , js ,images , index.php
+-> Navbar  With Sitename , Home , Link , link , link      Settings -> DropDown
+---------------------------------------------------------------------------
+section ( container )
+	div (row)  
+		article  (article)
+		aside (side bar )

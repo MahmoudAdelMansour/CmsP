@@ -1,0 +1,332 @@
+/*Start Styling*/
+@keyframes opacityc {
+	from {transform:scale(0);}
+	to {transform:scale(1);}
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  font-family:"Roboto Condensed",'Font Awesome 5 Free', sans-serif !important;
+}
+html,body{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+/* Navbar Style And links */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  flex-shrink: 1;
+  align-items:center;
+  width:100%;
+  position:relative;
+  background:#0f193e;
+}
+nav a img {
+ transition:all 0.5s ease-in-out;
+  width:70px;
+  margin-left:4px;
+  filter: saturate(150%) hue-rotate(140deg) brightness(100%) contrast(67%);
+}
+nav a img:hover{
+  transform: rotate(360deg);
+  filter: saturate(390%) hue-rotate(135deg) brightness(100%) contrast(67%);
+}
+.mainul {
+  display: flex;
+  margin:0px 5px;
+}
+.mainul li{
+  list-style: none;
+  margin:0px 6px;
+  width:90px;
+
+}
+.mainul li a {
+  text-decoration: none;
+  color:white;
+  padding: 28px 25px;
+  font-weight: bold;
+}
+.mainul li a:hover{
+   background: #52469c;
+}
+/* Style The Dropdown Button */
+.dropbtn{
+  background: transparent;
+  color:white;
+  padding: 16px;
+  border:none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left:auto;
+  margin-right: 6px;
+}
+.dropdown-content {
+  position: absolute;
+  margin-top:3px;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+  display: none;
+}
+.dropdown-content:before{
+  content: "";
+  position: absolute;
+  top:0;
+  right: 0;
+  margin-top: -6px;
+  border-top:0px solid transparent;
+  border-right:15px solid transparent;
+  border-bottom:15px solid #f9f9f9;
+  border-left:15px solid transparent;
+}
+.dropdown-content a {
+ color:black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin-top:10px;
+}
+.dropdown-content a:hover {background-color: #9b59b6;}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+.dropdown:hover .dropbtn{
+  color:snow;
+}
+/* Welcome Phrase */
+.about {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.about-phrase{
+  display: flex;
+  flex-direction: column;
+}
+.head-about {
+  width: 240px;
+  margin: 20px;
+  font-size: 25px;
+  border-bottom:3px solid #34c6d3;
+  text-transform: uppercase;
+  color:#41464b;
+}
+.body-about {
+  margin:20px;
+  font-size: 14px;
+  line-height:1.42857143;
+  color:#333;
+}
+.about a {
+  display: inline-block;
+  margin:20px;
+  padding:12px 26px 12px 26px;
+  border:1px solid transparent;
+  border-width: 2px;
+  border-color: #34c6d3;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size:16px;
+  font-weight: 400;
+  color:#34c6d3;
+}
+.about a:hover {
+    background:#34c6d3;
+    color:white;
+}
+.img-back {
+  background:url("../images/hydra.png");
+  background-attachment:fixed;
+  background-position:center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  border-top:700px solid transparent;
+  border-left:200px solid #fff;
+  width: 90%;
+  height:700px;
+}
+/*Main Page Style*/
+main {
+  display: grid;
+  grid-template-columns: 94% 5%;
+  grid-auto-rows: auto;
+  grid-gap:0 1%;
+  min-height: 100%;
+}
+/*Articles Style Cards*/
+.p-articles {
+  display: grid;
+  grid-template-columns:repeat(5,20%);
+  grid-template-rows:auto;
+  grid-gap: 1rem;
+  padding-left: 8rem;
+  overflow: scroll;
+  width: 100%;
+  --four:-4rem;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  margin-top:1rem;
+  margin-left:-7rem;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius:1rem;
+  background: #272148;
+  color:white;
+  transition: 0.2s;
+  box-shadow:4px 4px 12px 2px #222;
+  animation-name: opacityc;
+  animation-duration:1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+}
+.article:not(:first-child) {
+    margin-left: -7rem;
+
+  }
+.article:hover,.card:focus-within{
+  transform:translateY(-1rem);
+  background: #38325d;
+}
+.article:hover ~ .article,
+.article:focus-within{
+  transform:translateX(calc(var(--four)*-1));
+  opacity:0.9;
+}
+.article h2 a{
+  text-decoration: none;
+  padding: 2px;
+  font-size:25px;
+  color:#34c6d3;
+  border-left:4px solid #30966d;
+}
+.article article {
+  margin-top:10px;
+  line-height: 1.2846;
+  color:#6abf9d;
+}
+  .butta{
+  display: inline-block;
+  margin-top:8px;
+  padding:12px 26px 12px 26px;
+  border:2px solid transparent;
+  border-width: 2px;
+  border-color: #24919a;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size:16px;
+  font-weight: 400;
+  color:#34c6d3;
+}
+.butta:hover {
+  background:#24919a;
+  color:white;
+}
+.feader {
+  display:none;
+}
+/* Side Bar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+  max-height:100%;
+  border:2px solid;
+  border-top:5px solid #222222;
+  border-radius: 0px 0px 0px 16px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background: black;
+  opacity: 0.9;
+}
+.sidebar:hover{
+  opacity:1;
+}
+.sidebar a{
+  text-decoration: none;
+  margin-top:19px;
+  padding: 10px 100%;
+  transition: 0.2s;
+  color:white;
+  font-size: 30px;
+}
+.sidebar a:hover{
+  text-shadow: 0px 0px 3px #eeee;
+  transform: scale(2);
+}
+/* footer */
+footer{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:50px;
+  margin-top:30px;
+  height: 50px;
+  background: #222222;
+}
+.copyrights {
+  justify-self: center;
+  align-self: center;
+  color:snow;
+  font-weight: bold;
+}
+/* Card */
+/*
+    body{
+      display: grid;
+      background: #777;;
+      height: 100vh;
+      margin: 0;
+      place-items: center;
+      overflow: hidden;
+    }
+    .cards {
+     display: flex;
+     --drag:-4rem;
+    }
+    .card {
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 280px;
+      height: 350px;
+      margin-left:-7rem;
+      background: #272148;
+      box-shadow: 4px 4px 12px 2px #222;
+      transition: 0.2s;
+      overflow: hidden;
+    &:not(:first-child) {
+      margin-left: -4;
+    }
+}
+    .card:hover,.card:focus-within {
+      transform:translateY(-1rem);
+    }
+
+    .card:hover ~ .card,
+    .card:focus-within ~ .card {
+        transform:translateX(calc(var(--drag)*-2));
+        background: #38325d;
+      }
+
+
+    */
