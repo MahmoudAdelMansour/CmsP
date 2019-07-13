@@ -1,4 +1,4 @@
-# CmsP
+# Cms Project
 Content Management System { Pure } Using -> PHP / MySql
 ## This Project For { Web Developer Traning } 
 Using HTML , Css , JS , PHP , MYSQL , And some plugins like Fonts Liyb And bootstrap -
